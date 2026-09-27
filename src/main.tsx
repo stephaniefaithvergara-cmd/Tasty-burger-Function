@@ -37,6 +37,7 @@ const peso = (value: number) =>
   `₱${value.toLocaleString("en-PH", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 const products: Product[] = [
+  // Tasty Burgers menu catalog
   {
     id: "classic",
     name: "Classic Double Burger",
