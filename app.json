@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Cheese Burger",
+    "price": 150,
+    "image": "images/burger1.jpg"
+  },
+  {
+    "name": "Double Cheese Burger",
+    "price": 200,
+    "image": "images/burger2.jpg"
+  },
+  {
+    "name": "Veggie Burger",
+    "price": 120,
+    "image": "images/burger3.jpg"
+  },
+  {
+    "name": "Chicken Burger",
+    "price": 180,
+    "image": "images/burger4.jpg"
+  }
+]
