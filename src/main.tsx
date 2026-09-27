@@ -160,6 +160,7 @@ function App() {
 
   const favoriteProducts = products.filter((p) => favorites.includes(p.id));
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const uniqueCartItems = cart.length;
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const toggleFavorite = (id: string) => {
@@ -294,7 +295,7 @@ function App() {
 
       {cartOpen && <div className="drawer-overlay" onClick={() => setCartOpen(false)}>
         <aside className="cart-drawer" onClick={(e) => e.stopPropagation()}>
-          <div className="cart-header"><div><p className="section-kicker">YOUR ORDER</p><h2>Cart <span>{itemCount}</span></h2></div><button onClick={() => setCartOpen(false)} className="close-button" aria-label="Close cart"><X /></button></div>
+          <div className="cart-header"><div><p className="section-kicker">YOUR ORDER</p><h2>Cart <span>{uniqueCartItems} items</span></h2></div><button onClick={() => setCartOpen(false)} className="close-button" aria-label="Close cart"><X /></button></div>
           <div className="cart-items">
             {cart.length ? cart.map((item) => <div className="cart-line" key={item.id}><div className="cart-thumb">{item.image ? <img src={item.image} alt="" /> : <FriesArt />}</div><div className="cart-line-info"><strong>{item.name}</strong><span>{peso(item.price)}</span><div className="quantity"><button onClick={() => changeQuantity(item.id, -1)}><Minus size={14} /></button><b>{item.quantity}</b><button onClick={() => changeQuantity(item.id, 1)}><Plus size={14} /></button><button className="trash" onClick={() => setCart((c) => c.filter((x) => x.id !== item.id))}><Trash2 size={15} /></button></div></div></div>) : <div className="empty-cart"><ShoppingBag size={38} /><h3>Your cart is empty</h3><p>Add your favorite burger or fries.</p><button onClick={() => setCartOpen(false)}>BROWSE MENU</button></div>}
           </div>
