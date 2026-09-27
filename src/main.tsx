@@ -150,11 +150,13 @@ function App() {
     return () => window.clearTimeout(t);
   }, [notice]);
 
+  const normalizedQuery = query.trim().toLowerCase();
+
   const visibleProducts = useMemo(() => products.filter((product) => {
     const categoryMatch = category === "All" || product.category === category;
-    const searchMatch = `${product.name} ${product.category}`.toLowerCase().includes(query.toLowerCase());
+    const searchMatch = `${product.name} ${product.category}`.toLowerCase().includes(normalizedQuery);
     return categoryMatch && searchMatch;
-  }), [category, query]);
+  }), [category, normalizedQuery]);
 
   const favoriteProducts = products.filter((p) => favorites.includes(p.id));
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
