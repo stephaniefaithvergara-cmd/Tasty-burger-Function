@@ -36,6 +36,8 @@ type CartItem = Product & { quantity: number };
 const peso = (value: number) =>
   `₱${value.toLocaleString("en-PH", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
+const STORE_NAME = "Tasty Burgers";
+
 const products: Product[] = [
   // Tasty Burgers menu catalog
   {
