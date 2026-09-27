@@ -195,7 +195,7 @@ function App() {
     <div className="app-shell">
       <div className="grain" />
       <header className="topbar">
-        <a className="logo" href="#home" aria-label="Tasty Burgers home">
+        <a className="logo" href="#home" aria-label={`${STORE_NAME} home`}>
           <span className="logo-mark"><Flame size={21} strokeWidth={3} /></span>
           <span><strong>TASTY</strong><small>BURGERS</small></span>
         </a>
@@ -208,7 +208,7 @@ function App() {
         <div className="top-actions">
           <div className="search-box">
             <Search size={17} />
-            <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search burger..." />
+            <input aria-label="Search menu" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search burger..." />
           </div>
           <button className="bag-button" onClick={() => setCartOpen(true)} aria-label="Open cart">
             <ShoppingBag size={20} />
