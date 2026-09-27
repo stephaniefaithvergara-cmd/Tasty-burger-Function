@@ -234,7 +234,7 @@ function App() {
           <div className="hero-visual reveal-right">
             <div className="floating-chip chip-one" />
             <div className="floating-chip chip-two" />
-            <img className="hero-burger" src="/images/hero-burger.png" alt="Tasty double burger" />
+            <img className="hero-burger" src="/images/hero-burger.png" alt={`${STORE_NAME} signature burger`} />
             <div className="delivery-badge"><Truck size={19} /><span>DELIVERY<br /><b>FAST & FRESH</b></span></div>
           </div>
           <div className="hero-strip"><span>FRESHLY GRILLED</span><i /> <span>100% FLAVOR</span><i /> <span>BURGERS & FRIES</span></div>
