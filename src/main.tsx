@@ -260,7 +260,7 @@ function App() {
                   {product.images?.length ? <FriesImage product={product} /> : product.image ? <img src={product.image} alt={product.name} /> : <FriesArt />}
                   <div className="image-overlay" />
                   {product.badge && <span className="product-badge">{product.badge}</span>}
-                  <button className={`favorite-button ${favorites.includes(product.id) ? "active" : ""}`} onClick={() => toggleFavorite(product.id)} aria-label={favorites.includes(product.id) ? "Remove favorite" : "Add favorite"}>
+                  <button className={`favorite-button ${favorites.includes(product.id) ? "active" : ""}`} type="button" onClick={() => toggleFavorite(product.id)} aria-label={favorites.includes(product.id) ? "Remove favorite" : "Add favorite"}>
                     <Heart size={19} fill={favorites.includes(product.id) ? "currentColor" : "none"} />
                   </button>
                 </div>
@@ -268,7 +268,7 @@ function App() {
                   <div className="food-meta"><span>{product.category}</span><div className="rating"><Star size={14} fill="currentColor" /> {product.rating} <small>({product.reviews})</small></div></div>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <div className="food-bottom"><strong>{peso(product.price)}</strong><button onClick={() => addToCart(product)}>ADD TO CART <Plus size={15} /></button></div>
+                  <div className="food-bottom"><strong>{peso(product.price)}</strong><button type="button" onClick={() => addToCart(product)}>ADD TO CART <Plus size={15} /></button></div>
                 </div>
               </article>
             ))}
