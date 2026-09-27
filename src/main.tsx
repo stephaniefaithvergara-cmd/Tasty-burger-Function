@@ -289,7 +289,7 @@ function App() {
         </section>
       </main>
 
-      <footer><div className="footer-logo">TASTY <span>BURGERS</span></div><p>Freshly grilled. Always delicious.</p><small>© 2026 Tasty Burgers. All rights reserved.</small></footer>
+      <footer><div className="footer-logo">TASTY <span>BURGERS</span></div><p>Freshly grilled. Always delicious.</p><small>© 2026 {STORE_NAME}. All rights reserved.</small></footer>
 
       {notice && <div className="toast"><Check size={17} /> {notice}</div>}
 
