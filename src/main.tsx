@@ -136,14 +136,14 @@ function App() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category>("All");
   const [favorites, setFavorites] = useState<string[]>(() => {
-    try { return JSON.parse(localStorage.getItem("burger-favorites") || "[]"); } catch { return []; }
+    try { return JSON.parse(localStorage.getItem("tasty-burgers-favorites") || "[]"); } catch { return []; }
   });
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [notice, setNotice] = useState("");
 
-  useEffect(() => localStorage.setItem("burger-favorites", JSON.stringify(favorites)), [favorites]);
+  useEffect(() => localStorage.setItem("tasty-burgers-favorites", JSON.stringify(favorites)), [favorites]);
   useEffect(() => {
     if (!notice) return;
     const t = window.setTimeout(() => setNotice(""), 2200);
