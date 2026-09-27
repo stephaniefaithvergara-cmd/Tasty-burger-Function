@@ -142,8 +142,10 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [notice, setNotice] = useState("");
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => localStorage.setItem("tasty-burgers-favorites", JSON.stringify(favorites)), [favorites]);
+  useEffect(() => setIsReady(true), []);
   useEffect(() => {
     if (!notice) return;
     const t = window.setTimeout(() => setNotice(""), 2200);
@@ -192,7 +194,7 @@ function App() {
   };
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${isReady ? "is-ready" : ""}`}>
       <div className="grain" />
       <header className="topbar">
         <a className="logo" href="#home" aria-label={`${STORE_NAME} home`}>
