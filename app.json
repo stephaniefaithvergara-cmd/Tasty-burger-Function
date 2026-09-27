@@ -1,6 +1,6 @@
 [
   {
-    "name": "Cheese Burger",
+    "name": "Tasty Cheese Burger",
     "price": 150,
     "image": "images/burger1.jpg"
   },
@@ -18,5 +18,10 @@
     "name": "Chicken Burger",
     "price": 180,
     "image": "images/burger4.jpg"
+  },
+  {
+    "name": "Loaded Cheese Fries",
+    "price": 119,
+    "image": "images/fries-special-1.png"
   }
 ]
