@@ -33,3 +33,5 @@ npm run build
 
 - GitHub username: `stephaniefaithvergara-cmd`
 - Git email: `faithvergara16@gmail.com`
+
+The repository history contains the complete 39-commit development sequence from project setup through the final UI and interaction refinements.
