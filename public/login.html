@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Burger Shop 🍔</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a3c, #ff4d4d);
+    }
+
+    .login-container {
+      width: 340px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: #fff;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .login-container input {
+      width: 85%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .login-container input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .login-container input:focus {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .login-container button {
+      width: 90%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #fff;
+      color: #ff4d4d;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #ff1a1a;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .login-container p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .login-container a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .login-container a:hover {
+      color: #ffd699;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back 👋</h2>
+    <input type="text" placeholder="Username" id="username" />
+    <input type="password" placeholder="Password" id="password" />
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (!user || !pass) {
+        alert("Please fill in all fields");
+        return;
+      }
+
+      alert(`Welcome, ${user}!`);
+      window.location.href = "index.html"; // Redirect to home
+    }
+  </script>
+</body>
+</html>
